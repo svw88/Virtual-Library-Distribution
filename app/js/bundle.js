@@ -40,7 +40,7 @@ app.service("ShipItService", function($http, $window) {
 	// method to set favorites.json using nodejs server
 	shipItService.setFavorites = function(entry) {
 		return $http({
-			url : 'http://localhost:8080/favorites',
+			url : '/favorites',
 			method : "POST",
 			data : entry,
 			header : 'Content-Type: application/json'
@@ -50,7 +50,7 @@ app.service("ShipItService", function($http, $window) {
 	// method to get favorites.json using nodejs server
 	shipItService.getFavorites = function(entry) {
 
-		return $http.get("http://localhost:8080/favorites").then(function(data) {
+		return $http.get("/favorites").then(function(data) {
 
 			return data;
 
