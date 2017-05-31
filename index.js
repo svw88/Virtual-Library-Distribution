@@ -6,7 +6,7 @@ var methodOverride = require('method-override');
 var fs = require('fs');
 
 // configuration =================
-
+app.set('port', (process.env.PORT || 5000));
 app.use(express.static(__dirname + '/app'));
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({
